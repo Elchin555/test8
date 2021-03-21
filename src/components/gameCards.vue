@@ -69,7 +69,8 @@ export default {
     console.log(this.answer);
     setTimeout(() => {
           this.showButton=true
-        }, 6000);
+        }, 8000);
+        
   },
   methods: {
     showCard(answer) {
