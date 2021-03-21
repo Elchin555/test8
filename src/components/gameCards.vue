@@ -2,7 +2,7 @@
   <div class="gameArea">
     <h3 class="tittle">Find picture</h3>
     <h1 class="desc">Select one of the open cards and click the "?".If you find the right answer, you are won</h1>
-
+{{answer}}
     <div class="container">
 
       <transition-group class="container">

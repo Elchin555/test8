@@ -1,6 +1,7 @@
 <template>
 <div class="container">
-  <p>Congratulations , You win! </p>
+  <p>Congratulations</p>
+   <h6>You won! </h6>
  <button @click="newGame">New Game</button>
 </div>
 </template>
@@ -38,9 +39,12 @@ export default {
   background-color: rgb(14, 255, 142);
   transition: .5s;
 }
-.container p{
+.container p ,h6{
   color:rgb(111, 255, 15);
   font-size: 250%;
+}
+.container h6{
+  margin-top:0;
 }
 
 </style>

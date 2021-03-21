@@ -10,7 +10,6 @@
   >
   
   </component>
-  
   </transition-group>
   
   
