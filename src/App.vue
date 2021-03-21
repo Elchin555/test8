@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <hello></hello>
+    <p>{{msg}}</p>
+    <button @click="fnc">change</button>
+
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+  import hello from "./components/HelloWorld"
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{
+hello
+  },
+  data(){
+    return{
+      msg:"test"
+    }
+  },
+  methods: {
+    fnc(){
+this.msg="auye jizn voram"
+    }
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
