@@ -2,7 +2,7 @@
   <div class="gameArea">
     <h3 class="tittle">Find picture</h3>
     <h1 class="desc">Select one of the open cards and click the "?".If you find the right answer, you are won</h1>
-{{answer}}
+<p class="secret" v-if="show">{{answer.name}}</p> <button v-if="showButton" @click="show=!show" class="secretBtn">Help</button>
     <div class="container">
 
       <transition-group class="container">
@@ -43,6 +43,8 @@ export default {
   },
   data() {
     return {
+      show:false,
+      showButton:false,
       selectedCard: null,
       activeCard: "defaultCard",
       cardName:null,
@@ -65,6 +67,9 @@ export default {
     this.answer = this.cards[answer - 1];
 
     console.log(this.answer);
+    setTimeout(() => {
+          this.showButton=true
+        }, 6000);
   },
   methods: {
     showCard(answer) {
@@ -80,6 +85,7 @@ export default {
             this.$emit("data", "lost");
           }
         }, 2000);
+       
       }
     },
   },
@@ -106,5 +112,16 @@ export default {
 }
 .shadow {
   box-shadow: 0px 5px 48px rgb(253, 6, 6) !important;
+}
+.secret{
+  text-decoration-line:underline overline line-through;
+}
+.secretBtn{
+  width: 70px;
+  height: 30px;
+  transition: .5s;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px grey;
 }
 </style>
