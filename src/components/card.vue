@@ -18,8 +18,8 @@ export default {
 
 <style scoped>
 .card{
-  width: 10%;
-  height: 10%;
+  width: 130px;
+  height: 132px;
   border-radius: 5px;
   border:1px solid black;
   transition:box-shadow .5s;
@@ -32,7 +32,7 @@ export default {
   transition:box-shadow .5s;
 }
 .card img{
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 </style>
